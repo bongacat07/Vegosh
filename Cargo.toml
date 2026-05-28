@@ -5,4 +5,4 @@ edition = "2024"
 
 [dependencies]
 rapidhash = "4.4.1"
-rustix = "1.1.4"
+rustix = { version = "1", features = ["net", "fs"] }

@@ -1,3 +1,6 @@
+mod server;
+mod protocol;
+
 fn main() {
-    println!("Hello, world!");
+    server::initialise_server().unwrap();
 }
