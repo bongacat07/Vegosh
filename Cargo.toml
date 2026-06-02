@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+hashbrown = "0.17.1"
 rapidhash = "4.4.1"
 rustix = { version = "1", features = ["net", "fs"] }
