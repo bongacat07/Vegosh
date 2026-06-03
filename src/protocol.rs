@@ -11,20 +11,20 @@ pub const MAX_ENTRIES: usize = 1_000_000;
 pub type KVStore =
     HashMap<[u8; MAX_KEY_LEN], [u8; MAX_VALUE_LEN]>;
 
-const MAGIC_BYTES: [u8; 2] = [b'v', b'k'];
+pub const MAGIC_BYTES: [u8; 2] = [b'v', b'k'];
 
-const SET_KEY:    [u8; 1] = [0x01];
-const GET_KEY:    [u8; 1] = [0x02];
-const DELETE_KEY: [u8; 1] = [0x03];
-const SIZE:       [u8; 1] = [0x04];
-const PING:       [u8; 1] = [0x05];
-const FLUSH:      [u8; 1] = [0x06];
+pub const SET_KEY:    [u8; 1] = [0x01];
+pub const GET_KEY:    [u8; 1] = [0x02];
+pub const DELETE_KEY: [u8; 1] = [0x03];
+pub const SIZE:       [u8; 1] = [0x04];
+pub const PING:       [u8; 1] = [0x05];
+pub const FLUSH:      [u8; 1] = [0x06];
 
-const OK:                [u8; 1] = [0x69];
-const KEY_NOT_FOUND:     [u8; 1] = [0x67];
-const MAX_LIMIT_REACHED: [u8; 1] = [0x68];
-const OK_KEY_UPDATED:    [u8; 1] = [0x65];
-const INVALID_OPCODE:    [u8; 1] = [0x64];
+pub const OK:                [u8; 1] = [0x69];
+pub const KEY_NOT_FOUND:     [u8; 1] = [0x67];
+pub const MAX_LIMIT_REACHED: [u8; 1] = [0x68];
+pub const OK_KEY_UPDATED:    [u8; 1] = [0x65];
+pub const INVALID_OPCODE:    [u8; 1] = [0x64];
 
 pub fn readn(
     fd: &OwnedFd,
