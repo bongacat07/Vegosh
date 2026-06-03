@@ -82,7 +82,6 @@ fn build_run_repl(fd: &OwnedFd) -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-// --- helpers ---
 
 fn to_key(s: &str) -> [u8; MAX_KEY_LEN] {
     let mut buf = [0u8; MAX_KEY_LEN];
@@ -111,7 +110,6 @@ fn parse_response(response: &[u8]) {
     }
 }
 
-// --- commands ---
 
 fn set(fd: &OwnedFd, key: &str, value: &str) {
     writen(fd, &MAGIC_BYTES).unwrap();
